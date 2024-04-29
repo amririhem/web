@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 28 avr. 2024 à 12:20
+-- Généré le : lun. 29 avr. 2024 à 18:12
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.0.30
 
@@ -43,7 +43,9 @@ CREATE TABLE `offre` (
 --
 
 INSERT INTO `offre` (`id_offre`, `titre`, `categorie`, `lieu`, `description`, `id_user`, `tel`, `email`) VALUES
-(1, 'babyssinting', 'babyssinting', 'tunis', 'bqjhscihiu', 2, '', '');
+(4, '', '1', 'Tunis', 'khrfgehr', 2, '97993774', 'amririhem19@gmail.com'),
+(9, '', '3', 'Sousse', 'bjxvd', 2, '97993774', 'amririhem19@gmail.com'),
+(10, '', '2', 'Sousse', 'sdjsdh', 2, '97993774', 'amririhem19@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -62,7 +64,7 @@ CREATE TABLE `user` (
   `role` varchar(10) NOT NULL,
   `niveau` varchar(50) NOT NULL,
   `etablisement` varchar(50) NOT NULL,
-  `description` text NOT NULL,
+  `descrip` text NOT NULL,
   `tel` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -70,8 +72,8 @@ CREATE TABLE `user` (
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nom`, `prenom`, `email`, `pwd`, `genre`, `datenaiss`, `role`, `niveau`, `etablisement`, `description`, `tel`) VALUES
-(2, 'amri', 'rihem', 'amririhem19@gmail.com', '123456', 'madame', '2003-08-20', 'student', '2', 'fst', 'je suis un etudiante hsfhqudh', ''),
+INSERT INTO `user` (`id_user`, `nom`, `prenom`, `email`, `pwd`, `genre`, `datenaiss`, `role`, `niveau`, `etablisement`, `descrip`, `tel`) VALUES
+(2, 'amr', 'rihem', 'amririhem19@gmail.com', '123456', 'madame', '2003-08-20', 'student', '2', '', '', '97993774'),
 (3, 'amri', 'rihem', 'amririhem20@gmail.com', '123456789', 'female', '2003-08-20', 'student', '2', 'fst', 'hfeiuzehf', '');
 
 --
@@ -99,7 +101,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `offre`
 --
 ALTER TABLE `offre`
-  MODIFY `id_offre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_offre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `user`

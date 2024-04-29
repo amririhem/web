@@ -107,7 +107,7 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
           </div>
           <div class="labelinput1">
             <label for="description" class="description">Description</label>
-            <textarea id="description" class="inputinscrit1" readonly><?php echo $utilisateur['description']; ?></textarea>
+            <textarea id="description" class="inputinscrit1" readonly><?php echo $utilisateur['descrip']; ?></textarea>
           </div>
             
           </div>

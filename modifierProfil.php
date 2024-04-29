@@ -1,42 +1,26 @@
 <?php
 session_start();
-
-// Vérifiez si l'ID de l'utilisateur est présent dans la session
 if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
-    // L'ID de l'utilisateur est présent dans la session
-    // Vous pouvez continuer à utiliser cet ID pour récupérer les informations de l'utilisateur
     $user_id = $_SESSION['id_user'];
-    
-    // Connectez-vous à la base de données ou effectuez d'autres opérations nécessaires
-    $serveur = "localhost"; 
+        $serveur = "localhost"; 
     $utilisateur = "root"; 
     $mot_de_passe = ""; 
     $base_de_donnees = "etudjobweb"; 
 
     $connexion = mysqli_connect($serveur, $utilisateur, $mot_de_passe, $base_de_donnees);
-
-    // Vérifiez la connexion à la base de données
     if (!$connexion) {
         die("La connexion à la base de données a échoué : " . mysqli_connect_error());
     }
-
-    // Requête SQL pour récupérer les informations de l'utilisateur à partir de son ID
     $query = "SELECT * FROM user WHERE id_user = $user_id";
     $resultat = mysqli_query($connexion, $query);
-
-    // Vérifiez si la requête a réussi
     if ($resultat) {
-        // Récupérez les données de l'utilisateur
+       
         $utilisateur = mysqli_fetch_assoc($resultat);
     } else {
-        // Gérez les erreurs de requête SQL
+      
     }
-
-    // Fermez la connexion à la base de données
     mysqli_close($connexion);
 } else {
-    // L'ID de l'utilisateur n'est pas présent dans la session
-    // Redirigez l'utilisateur vers la page de connexion ou affichez un message d'erreur
     header("Location: login.php");
     exit();
 }
@@ -114,12 +98,12 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
             <input type="text" id="eduLevel" name="eduLevel" value="<?php echo $utilisateur['niveau']; ?>" class="inputinscrit1"   >
           </div>
           <div class="labelinput1">
-            <label for="etablissement" class="etablissement">Établissement</label>
-            <input type="text" id="etablissement" name="etablissement" value="<?php echo $utilisateur['etablisement']; ?>" class="inputinscrit1"   >
+            <label for="etablisement" class="etablisement">Établissement</label>
+            <input type="text" id="etablisement" name="etablisement" value="<?php echo $utilisateur['etablisement']; ?>" class="inputinscrit1"   >
           </div>
           <div class="labelinput1">
-            <label for="description" class="description">Description</label>
-            <textarea id="description1" name="description1" class="inputinscrit1"   ><?php echo $utilisateur['description']; ?></textarea>
+            <label for="descrip" class="descrip">Description</label>
+            <textarea id="descrip" name="descrip" class="inputinscrit1"   ><?php echo $utilisateur['descrip']; ?></textarea>
           </div>
           <button type="submit" class="bottom1">Modifier</button>
           </div>

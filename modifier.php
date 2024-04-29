@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genre = $_POST['genre'];
     $role = $_POST['role'];
     $eduLevel = $_POST['eduLevel'];
-    $description = $_POST['description'];
-    $etablissement=$_post['etablissement'];
-    $query = "UPDATE user SET nom='$nom', prenom='$prenom', email='$email', tel='$tel',datenaiss='$datenaiss',genre='$genre', niveau='$eduLevel',etablisement='$etablissement', description='$description1' WHERE id_user=$user_id";
+    $description = $_POST['descrip'];
+    $etablisement=$_post['etablisement'];
+    $query = "UPDATE user SET nom='$nom', prenom='$prenom', email='$email', tel='$tel',datenaiss='$datenaiss',genre='$genre', niveau='$eduLevel',etablisement='$etablisement', descrip='$description' WHERE id_user=$user_id";
     if (mysqli_query($connexion, $query)) {
         header("Location: profil.php");
         exit();
