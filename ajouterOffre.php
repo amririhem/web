@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $id_utilisateur = $_SESSION['id_user'];
-    $titre = $_POST['titre'];
+    $titre = $_POST['Titre'];
     $categorie = $_POST['categorie'];
     $lieu = $_POST['lieu'];
     $description = $_POST['desc'];
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $row_utilisateur = mysqli_fetch_assoc($resultat_utilisateur);
     $tel = $row_utilisateur['tel'];
     $email = $row_utilisateur['email'];
-    $requete = "INSERT INTO offre (id_user, titre, categorie, lieu, description, tel, email) VALUES ('$id_utilisateur', '$titre', '$categorie', '$lieu', '$description', '$tel', '$email')";
+    $requete = "INSERT INTO offre (id_user, titre, categorie, lieu, descrip, tel, email) VALUES ('$id_utilisateur', '$titre', '$categorie', '$lieu', '$description', '$tel', '$email')";
     if (mysqli_query($connexion, $requete)) {
         header("Location: Mesoffre.php");
         exit();

@@ -18,11 +18,11 @@
           </li>
           <li class="navitem">
                     <a href="Mesoffre.php" class="link">
-                    <p class="picon">Mes Offre</p>
+                    <p class="picon">Mes Offres</p>
                     </a>
                 </li>
           <li class="navitem">
-            <a href="profil.html" class="link">
+            <a href="profil.php" class="link">
             <img src="img/utilisateur.png" alt="Save Offres" class="icon">
             <p class="picon">Profil</p>
             </a>
@@ -71,7 +71,7 @@
             $html_offres .= "<h3 class='titreOffre'>" . $row['titre'] . "</h3>";
             $html_offres .= "<div class='iconplusp'>";
             $html_offres .= "<img src='home/description.png' alt='' class='iconi' />";
-            $html_offres .= "<p class='desc'>" . $row['description'] . "</p>";
+            $html_offres .= "<p class='desc'>" . $row['descrip'] . "</p>";
             $html_offres .= "</div>";
             $html_offres .= "<div class='iconplusp'>";
             $html_offres .= "<img src='home/localisation.png' alt='' class='iconi' />";

@@ -28,7 +28,7 @@ if (mysqli_num_rows($resultat) > 0) {
         $html_offres .= "<h3 class='titreOffre'>" . $row['titre'] . "</h3>";
         $html_offres .= "<div class='iconplusp'>";
         $html_offres .= "<img src='home/description.png' alt='' class='iconi' />";
-        $html_offres .= "<p class='desc'>" . $row['description'] . "</p>";
+        $html_offres .= "<p class='desc'>" . $row['descrip'] . "</p>";
         $html_offres .= "</div>";
         $html_offres .= "<div class='iconplusp'>";
         $html_offres .= "<img src='home/localisation.png' alt='' class='iconi' />";
