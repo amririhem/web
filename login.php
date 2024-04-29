@@ -21,10 +21,10 @@ if (mysqli_num_rows($resultat) > 0) {
     $role = $row['role'];
     $_SESSION['id_user'] = $userId;
     if ($role == "student") {
-        header("Location: etudiant.html"); 
+        header("Location: etudiant.html");  
         exit();
     } else {
-        header("Location: entreprise.html"); 
+        header("Location: employeur.html"); 
         exit();
     }
 } else {

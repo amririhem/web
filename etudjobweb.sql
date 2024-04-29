@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 29 avr. 2024 à 18:39
+-- Généré le : lun. 29 avr. 2024 à 19:35
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.0.30
 
@@ -38,7 +38,7 @@ CREATE TABLE `user` (
   `role` varchar(10) NOT NULL,
   `niveau` varchar(50) DEFAULT NULL,
   `etablisement` varchar(50) DEFAULT NULL,
-  `descrip` text NOT NULL,
+  `descrip` text DEFAULT NULL,
   `tel` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -48,7 +48,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `nom`, `prenom`, `email`, `pwd`, `genre`, `datenaiss`, `role`, `niveau`, `etablisement`, `descrip`, `tel`) VALUES
 (2, 'am', 'rihem', 'amririhem19@gmail.com', '123456', 'madame', '2003-08-20', 'student', '2', '', 'jkdvkdfhv', '97993774'),
-(3, 'amri', 'rihem', 'amririhem20@gmail.com', '123456789', 'female', '2003-08-20', 'student', '2', 'fst', 'hfeiuzehf', '');
+(3, 'amri', 'rihem', 'amririhem20@gmail.com', '123456789', 'female', '2003-08-20', 'student', '2', 'fst', 'hfeiuzehf', ''),
+(5, 'amri', 'rayen', 'rr@gmail.com', '12345678a', 'female', '2003-08-20', 'employer', '2', '3', 'nkjhj', '');
 
 --
 -- Index pour les tables déchargées
@@ -68,7 +69,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

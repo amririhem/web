@@ -19,8 +19,8 @@ $genre = $_POST['genre'];
 $role = $_POST['role'];
 $niveau = $_POST['niveau'];
 $etab = $_POST['etab'];
-$description = $_POST['des'];
-$requete = "INSERT INTO user (nom, prenom, email, pwd, datenaiss, genre, role, niveau, etablisement, description) VALUES ('$nom', '$prenom', '$email', '$pwd', '$datenai', '$genre', '$role', '$niveau', '$etab', '$description')";
+$descrip = $_POST['des'];
+$requete = "INSERT INTO user (nom, prenom, email, pwd, datenaiss, genre, role, niveau, etablisement, descrip) VALUES ('$nom', '$prenom', '$email', '$pwd', '$datenai', '$genre', '$role', '$niveau', '$etab', '$descrip')";
 if (mysqli_query($connexion, $requete)) {
     echo "Inscription réussie.";
     header("Location: login.html"); 
