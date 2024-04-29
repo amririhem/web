@@ -18,7 +18,7 @@ if(isset($_POST['id_offre'])) {
     $requete_suppression = "DELETE FROM offre WHERE id_offre = $id_offre";
     $resultat_suppression = mysqli_query($connexion, $requete_suppression);
     if($resultat_suppression) {
-        header("Location: ".$_SERVER['PHP_SELF']);
+        header("Location: Mesoffre.php");
         exit();
     } else {
         echo "Erreur lors de la suppression de l'offre.";

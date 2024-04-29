@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 29 avr. 2024 à 18:12
+-- Généré le : lun. 29 avr. 2024 à 18:39
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.0.30
 
@@ -24,32 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `offre`
---
-
-CREATE TABLE `offre` (
-  `id_offre` int(11) NOT NULL,
-  `titre` varchar(60) NOT NULL,
-  `categorie` varchar(60) NOT NULL,
-  `lieu` varchar(50) NOT NULL,
-  `description` text NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `tel` varchar(8) NOT NULL,
-  `email` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `offre`
---
-
-INSERT INTO `offre` (`id_offre`, `titre`, `categorie`, `lieu`, `description`, `id_user`, `tel`, `email`) VALUES
-(4, '', '1', 'Tunis', 'khrfgehr', 2, '97993774', 'amririhem19@gmail.com'),
-(9, '', '3', 'Sousse', 'bjxvd', 2, '97993774', 'amririhem19@gmail.com'),
-(10, '', '2', 'Sousse', 'sdjsdh', 2, '97993774', 'amririhem19@gmail.com');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `user`
 --
 
@@ -62,8 +36,8 @@ CREATE TABLE `user` (
   `genre` varchar(10) NOT NULL,
   `datenaiss` date NOT NULL,
   `role` varchar(10) NOT NULL,
-  `niveau` varchar(50) NOT NULL,
-  `etablisement` varchar(50) NOT NULL,
+  `niveau` varchar(50) DEFAULT NULL,
+  `etablisement` varchar(50) DEFAULT NULL,
   `descrip` text NOT NULL,
   `tel` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -73,19 +47,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nom`, `prenom`, `email`, `pwd`, `genre`, `datenaiss`, `role`, `niveau`, `etablisement`, `descrip`, `tel`) VALUES
-(2, 'amr', 'rihem', 'amririhem19@gmail.com', '123456', 'madame', '2003-08-20', 'student', '2', '', '', '97993774'),
+(2, 'am', 'rihem', 'amririhem19@gmail.com', '123456', 'madame', '2003-08-20', 'student', '2', '', 'jkdvkdfhv', '97993774'),
 (3, 'amri', 'rihem', 'amririhem20@gmail.com', '123456789', 'female', '2003-08-20', 'student', '2', 'fst', 'hfeiuzehf', '');
 
 --
 -- Index pour les tables déchargées
 --
-
---
--- Index pour la table `offre`
---
-ALTER TABLE `offre`
-  ADD PRIMARY KEY (`id_offre`),
-  ADD KEY `id_user` (`id_user`);
 
 --
 -- Index pour la table `user`
@@ -98,26 +65,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT pour la table `offre`
---
-ALTER TABLE `offre`
-  MODIFY `id_offre` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `offre`
---
-ALTER TABLE `offre`
-  ADD CONSTRAINT `offre_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
