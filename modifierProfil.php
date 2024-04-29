@@ -31,7 +31,7 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil</title>
-  <link rel="stylesheet" href="profil.css">
+  <link rel="stylesheet" href="modifierProfil.css">
 </head>
 <body>
   <div class="background">

@@ -53,22 +53,18 @@
             <input type="radio" name="genre" value="female" class="inputinscrit4" onchange="handleChangegenre(event)" /> Femme</label>
         </div>
         <p class="prole">Choisir un rôle</p>
-        <div class="labelinput3">
-          <label>
-            <input type="radio" name="role" value="student" id="studentRadio" class="inputinscrit3" />Étudiant </label>
+        <div  class="labelinput3">
+          <label> Étudiant </label><input type="radio" name="role" value="student" id="studentRadio" class="inputinscrit3" />
           <label>
             <input type="radio"   name="role" id="niveau"  autoComplete="off" placeholder="Niveau" value="employer"  />
 
             Employeur </label>
         </div>
-        <div class="labelinput5 studentInput">
-          <label htmlFor="niveau" class="studentInput">Niveau</label>
+        <div class="labelinput5" >
           <input type="text" name="niveau" id="niveau" class="studentInput" autoComplete="off" placeholder="Niveau" value="" onchange="handleChangeNiveau(event)" />
-          <p htmlFor="etab" class="studentInput">Établissement</p>
           <input type="text" name="etab" id="etab" class="studentInput" autoComplete="off" placeholder="Établissement" value="" onchange="handleChangeEtablissement(event)" />
         </div>
-        <div class="inputinscrit6 studentInput">
-          <label htmlFor="description" class="studentInput">Description</label>
+        <div class="inputinscrit6 studentInput" >
           <textarea id="description" name="des" class="studentInput" placeholder="Description" value="" onchange="handleChangeDescription(event)"></textarea>
         </div>
        
