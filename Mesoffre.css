@@ -36,11 +36,11 @@
   }  
   .part{
     width: 60%;
-    height: 320px;
+    height: 300px;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
-    
+    justify-content: space-around;
   }
   .offre{
     width: 1000px;
@@ -181,6 +181,21 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  }
+  .bouttonoffre {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 24px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  .bouttonoffre:hover {
+      background-color: #45a049;
   }
   
   .bouttons {
@@ -422,4 +437,20 @@
     background-color: #e5e5e5;
   }
   
+  .deleteoffre {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
   
+  .deleteoffre:hover {
+    background-color: #bd2130;
+  }
+
+  .bb{
+    align-self: flex-end;
+  }
