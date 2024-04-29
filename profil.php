@@ -93,11 +93,12 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
             <input type="text" id="role"  name="role" value="<?php echo $utilisateur['role']; ?>" class="inputinscrit1" readonly  >
           </div>
     
-          <button type="submit" class="bottom2">Modifier</button>
+          
           </div>
           
-        
-          <button type="button" class="bottom1" onclick="window.location.href='modifierProfil.php' >Modifier</button>
+          <button type="button" class="bottom1">Modifier mot de passe </button>
+          <button type="submit" onclick="window.location.href='modifierProfil.php'"  class="bottom2" >Modifier</button>
+         
         </form> 
       </div>
     </div> 

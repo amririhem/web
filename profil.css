@@ -183,20 +183,22 @@ left: 48px;
   margin-left:-91px; /* Add margin for spacing between radio buttons */
 }
 
-.bottom2{
-  border-radius: 4px;
+.bottom2 {
+   
+  cursor: pointer; /* Curseur de souris */
+  transition: all 0.3s ease; /* Transition effect for size change */
+   margin-top: 40px;
+
+
   font-weight: bold;
-  background-color: #e9d6b4;
-  width: 200px;
-  height: 29px;
-  border: none;
-  color: #000000;
-  text-align: center;
-  font-size: 20px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 20px auto;
-  display: block;
+  font-size: 13px;
+  margin-left:100px;
+  background-color:#e9d6b4;
+  margin: 20px;
+  margin-left: 300px;
+  width:30%;
+ min-height: 28px;
+ 
 }
 .bottom2:hover {
   background-color: #fef4d2;
@@ -315,7 +317,31 @@ margin-top: 20px;
   flex-direction: row;
   align-items: center;
 }
+.bottom1 {
+   
+  cursor: pointer; /* Curseur de souris */
+   
+   
 
+border: none;
+outline: none;
+  font-weight: bold;
+  font-size: 15px;
+  
+  background:transparent;
+  
+  margin-top: 40px;
+  width:30%;
+ min-height: 28px;
+ 
+
+
+ text-shadow: 2px 4px 19px #ffe5ad;
+ font-family: math;
+ color:#3d3322;
+ font-size: 13px;
+ 
+}
 
 .navlist {
   display: flex;
