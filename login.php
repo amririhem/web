@@ -23,7 +23,12 @@ if (mysqli_num_rows($resultat) > 0) {
     if ($role == "student") {
         header("Location: etudiant.html");  
         exit();
-    } else {
+    }
+    else if ($role == "admin"){
+        header("Location: admin.php");  
+        exit();
+    }
+    else {
         header("Location: employeur.html"); 
         exit();
     }

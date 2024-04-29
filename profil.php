@@ -61,45 +61,42 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
   </div>
     <div class="loginbody">
       <div class="tabcontent">
-        <form class="mef">
+      <form class="mef" name='f1' action="modifier.php" method="post">
           <p class="p1inscrit">Votre profil</p>
           <div class="labelinput1">
-            <label for="user_name" class="nom">Nom</label>
-            <input type="text" id="user_name" value="<?php echo $utilisateur['nom']; ?>"  class="inputinscrit1" readonly>
-            <p for="prenom" class="prenom">Prénom</p>
-            <input type="text" id="prenom" value="<?php echo $utilisateur['prenom']; ?>" class="inputinscrit1" readonly>
+          <div class="labelinput1">
+            <label for="nom" class="nom">Nom</label>
+            <input type="text" id="nom" name="nom" value="<?php echo $utilisateur['nom']; ?>" class="inputinscrit1" readonly   >
+          </div><br>
+          <div class="labelinput1">
+            <label for="prenom" class="prenom">Prénom</label>
+            <input type="text" id="prenom"  name="prenom" value="<?php echo $utilisateur['prenom']; ?>" class="inputinscrit1"  readonly  >
           </div>
-          <div class="labelinput">
-            <label for="email">Email</label>
-            <input type="email" id="user_email"  value="<?php echo $utilisateur['email']; ?>" class="inputinscrit" readonly>
-            <label for="tel">Numéro de tél</label>
-            <input type="text" id="tel" value="<?php echo $utilisateur['tel']; ?>"  class="inputinscrit" readonly>
+          <div class="labelinput1">
+            <label for="email" class="email">Email</label>
+            <input type="text" id="email" name="email" value="<?php echo $utilisateur['email']; ?>" class="inputinscrit1"  readonly >
           </div>
-          <div class="labelinput">
-            <label for="dateNaissance" class="labele">Date de Naissance</label>
-            <input type="text" id="dateNaissance"   value="<?php echo $utilisateur['datenaiss']; ?>" class="inputinscrit" readonly>
+          <div class="labelinput1">
+            <label for="tel" class="tel">Numéro de téléphone</label>
+            <input type="text" id="tel" name="tel" value="<?php echo $utilisateur['tel']; ?>" class="inputinscrit1"  readonly >
           </div>
-          <p class="pgenre">Genre</p>
-          <div class="labelinput4">
-            <div class="radioWrapper">
-              <input class="inputinscrit4" type="radio" name="genre" value="male" checked> 
-              <label class="lab4"> Homme </label>
-            </div>
-            <div class="radioWrapper"> 
-              <input class="inputinscrit4" type="radio" name="genre" value="female"> 
-              <label class="lab4"> Femme</label> 
-            </div>
+          <div class="labelinput1">
+            <label for="dateNaissance" class="dateNaissance">Date de naissance</label>
+            <input type="text" id="dateNaissance"  name="dateNaissance" value="<?php echo $utilisateur['datenaiss']; ?>" class="inputinscrit1"  readonly >
           </div>
-          <div class="labelinput5">
-            <label for="eduLevel">Niveau</label>
-            <input type="text" id="eduLevel" value="<?php echo $utilisateur['niveau']; ?>" readonly class="inputinscrit5">
-            <p for="etablissement" class="petab">Établissement</p>
-            <input type="text" id="etablissement"  value="<?php echo $utilisateur['etablisement']; ?>"  readonly class="inputinscrit5">
+          <div class="labelinput1">
+            <label for="genre" class="genre">Genre</label>
+            <input type="text" id="genre" name="genre" value="<?php echo $utilisateur['genre']; ?>" class="inputinscrit1"  readonly >
           </div>
-          <div class="inputinscrit6">
-            <label for="Description" class="labeled">Description</label>
-            <textarea type="text" id="Description"  value="<?php echo $utilisateur['descrip']; ?>"class="inputinscrit6text" readonly> Description text here </textarea>                        
+          <div class="labelinput1">
+            <label for="role" class="role">Rôle</label>
+            <input type="text" id="role"  name="role" value="<?php echo $utilisateur['role']; ?>" class="inputinscrit1" readonly  >
           </div>
+    
+          <button type="submit" class="bottom2">Modifier</button>
+          </div>
+          
+        
           <button type="button" class="bottom1" onclick="window.location.href='modifierProfil.php' >Modifier</button>
         </form> 
       </div>

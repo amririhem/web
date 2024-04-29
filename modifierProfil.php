@@ -93,19 +93,8 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
             <label for="role" class="role">Rôle</label>
             <input type="text" id="role"  name="role" value="<?php echo $utilisateur['role']; ?>" class="inputinscrit1"   >
           </div>
-          <div class="labelinput1">
-            <label for="eduLevel" class="eduLevel">Niveau</label>
-            <input type="text" id="eduLevel" name="eduLevel" value="<?php echo $utilisateur['niveau']; ?>" class="inputinscrit1"   >
-          </div>
-          <div class="labelinput1">
-            <label for="etablisement" class="etablisement">Établissement</label>
-            <input type="text" id="etablisement" name="etablisement" value="<?php echo $utilisateur['etablisement']; ?>" class="inputinscrit1"   >
-          </div>
-          <div class="labelinput1">
-            <label for="descrip" class="descrip">Description</label>
-            <textarea id="descrip" name="descrip" class="inputinscrit1"   ><?php echo $utilisateur['descrip']; ?></textarea>
-          </div>
-          <button type="submit" class="bottom1">Modifier</button>
+    
+          <button type="submit" class="bottom2">Modifier</button>
           </div>
           
         </form> 
