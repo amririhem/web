@@ -45,16 +45,11 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
               </a>
           </li>
           <li class="navitem">
-              <a href="profil.php" class="link">
+              <a href="profil.html" class="link">
               <img src="../PROJETWEB/img/utilisateur.png" alt="Save Offres" class="icon">
               <p class="picon">Profil</p>
               </a>
           </li>
-          <li class="navitem">
-                    <a href="Mesoffre.php" class="link">
-                    <p class="picon">Mes Offre</p>
-                    </a>
-                </li>
           <li class="navitem">
               <a href="Acceuil.html" class="link">
               <img src="../PROJETWEB/img/bloquer.png" alt="Log Out" class="icon">
@@ -69,50 +64,43 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
         <form class="mef">
           <p class="p1inscrit">Votre profil</p>
           <div class="labelinput1">
-          <div class="labelinput1">
-            <label for="nom" class="nom">Nom</label>
-            <input type="text" id="nom" value="<?php echo $utilisateur['nom']; ?>" class="inputinscrit1" readonly>
-          </div>
-          <div class="labelinput1">
-            <label for="prenom" class="prenom">Prénom</label>
+            <label for="user_name" class="nom">Nom</label>
+            <input type="text" id="user_name" value="<?php echo $utilisateur['nom']; ?>"  class="inputinscrit1" readonly>
+            <p for="prenom" class="prenom">Prénom</p>
             <input type="text" id="prenom" value="<?php echo $utilisateur['prenom']; ?>" class="inputinscrit1" readonly>
           </div>
-          <div class="labelinput1">
-            <label for="email" class="email">Email</label>
-            <input type="text" id="email" value="<?php echo $utilisateur['email']; ?>" class="inputinscrit1" readonly>
+          <div class="labelinput">
+            <label for="email">Email</label>
+            <input type="email" id="user_email"  value="<?php echo $utilisateur['email']; ?>" class="inputinscrit" readonly>
+            <label for="tel">Numéro de tél</label>
+            <input type="text" id="tel" value="<?php echo $utilisateur['tel']; ?>"  class="inputinscrit" readonly>
           </div>
-          <div class="labelinput1">
-            <label for="tel" class="tel">Numéro de téléphone</label>
-            <input type="text" id="tel" value="<?php echo $utilisateur['tel']; ?>" class="inputinscrit1" readonly>
+          <div class="labelinput">
+            <label for="dateNaissance" class="labele">Date de Naissance</label>
+            <input type="text" id="dateNaissance"   value="<?php echo $utilisateur['datenaiss']; ?>" class="inputinscrit" readonly>
           </div>
-          <div class="labelinput1">
-            <label for="dateNaissance" class="dateNaissance">Date de naissance</label>
-            <input type="text" id="dateNaissance" value="<?php echo $utilisateur['datenaiss']; ?>" class="inputinscrit1" readonly>
+          <p class="pgenre">Genre</p>
+          <div class="labelinput4">
+            <div class="radioWrapper">
+              <input class="inputinscrit4" type="radio" name="genre" value="male" checked> 
+              <label class="lab4"> Homme </label>
+            </div>
+            <div class="radioWrapper"> 
+              <input class="inputinscrit4" type="radio" name="genre" value="female"> 
+              <label class="lab4"> Femme</label> 
+            </div>
           </div>
-          <div class="labelinput1">
-            <label for="genre" class="genre">Genre</label>
-            <input type="text" id="genre" value="<?php echo $utilisateur['genre']; ?>" class="inputinscrit1" readonly>
+          <div class="labelinput5">
+            <label for="eduLevel">Niveau</label>
+            <input type="text" id="eduLevel" value="<?php echo $utilisateur['niveau']; ?>" readonly class="inputinscrit5">
+            <p for="etablissement" class="petab">Établissement</p>
+            <input type="text" id="etablissement"  value="<?php echo $utilisateur['etablisement']; ?>"  readonly class="inputinscrit5">
           </div>
-          <div class="labelinput1">
-            <label for="role" class="role">Rôle</label>
-            <input type="text" id="role" value="<?php echo $utilisateur['role']; ?>" class="inputinscrit1" readonly>
+          <div class="inputinscrit6">
+            <label for="Description" class="labeled">Description</label>
+            <textarea type="text" id="Description"  value="<?php echo $utilisateur['descrip']; ?>"class="inputinscrit6text" readonly> Description text here </textarea>                        
           </div>
-          <div class="labelinput1">
-            <label for="eduLevel" class="eduLevel">Niveau</label>
-            <input type="text" id="eduLevel" value="<?php echo $utilisateur['niveau']; ?>" class="inputinscrit1" readonly>
-          </div>
-          <div class="labelinput1">
-            <label for="etablissement" class="etablissement">etablisement</label>
-            <input type="text" id="etablissement" value="<?php echo $utilisateur['etablisement']; ?>" class="inputinscrit1" readonly>
-          </div>
-          <div class="labelinput1">
-            <label for="description" class="description">Description</label>
-            <textarea id="description" class="inputinscrit1" readonly><?php echo $utilisateur['descrip']; ?></textarea>
-          </div>
-            
-          </div>
-          <button type="button" class="bottom1" onclick="window.location.href='modifierProfil.php'">Modifier</button>
-          
+          <button type="button" class="bottom1" onclick="window.location.href='modifierProfil.php' >Modifier</button>
         </form> 
       </div>
     </div> 
