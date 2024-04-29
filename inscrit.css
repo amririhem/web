@@ -161,8 +161,8 @@ margin: 7px;
     width: 205px;
 
 }
-   .labelinput5 {
-  /*display: flex;
+   .labelinput5  {
+  display: flex;
   margin-bottom: 5px;
   align-items: flex-start;
   flex-direction: row;
@@ -172,7 +172,7 @@ margin: 7px;
   margin-left: 54px; 
   margin-right: auto; 
   padding-bottom:10px ;
-  margin-top: 22px;*/
+  margin-top: 22px;
  
     position: inherit;
     display: flex;
@@ -181,28 +181,14 @@ margin: 7px;
  
 } 
 
-/*.labelinput5 label {
+.labelinput5 label {
   position: relative;
   left: 48px;
   bottom: 27px;
   margin: 7px;
   font-family: monospace;
-}*/
-.inputinscrit5{
-
-    /* width: 210px; 
-     height: 26px;
-    margin-right: 57px;
-    margin-left: -15px;
-    border: 2px solid #e5e5e5;*/
-    margin-left: 56px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #100f0f;
-    background-color: #fcfcfc;
-    width: 188px;
-
 }
+
 
 .inputinscrit6 {
   display: flex;
@@ -231,6 +217,22 @@ margin: 7px;
 .inputinscrit6{
   margin-left: -5px;
   width: 440px;
+}
+
+.inputinscrit5{
+
+  /* width: 210px; 
+   height: 26px;
+  margin-right: 57px;
+  margin-left: -15px;
+  border: 2px solid #e5e5e5;*/
+  margin-left: 56px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #100f0f;
+  background-color: #fcfcfc;
+  width: 188px;
+
 }
 
 .radios {

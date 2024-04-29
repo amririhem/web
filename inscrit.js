@@ -12,13 +12,14 @@ function verif() {
   var etab = document.forme.etab.value.trim();
   var description = document.forme.des.value.trim();
 
-  if (!nom || !prenom || !email || !tel || !pwd || !pwdverif || !datenai || !niveau || !etab || !description) {
+  if (!nom || !prenom || !email || !tel || !pwd || !pwdverif || !datenai ) {
     alert("Veuillez remplir tous les champs.");
+    if(role === "student" && (!niveau || !etab || !description)){
+      alert("Veuillez remplir tous les champs.");
+    }
     return false;
   }
 
-  
-  
   if (email.indexOf("@") === -1 || email.lastIndexOf(".") === -1 || email.substring(email.indexOf("@")+1 ,email.lastIndexOf(".")) === "" || email.substr(email.indexOf(".")+1) === ""  ) {
     alert("L'adresse e-mail n'est pas valide.");
     return false;
