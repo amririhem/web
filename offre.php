@@ -27,23 +27,24 @@ if (mysqli_num_rows($resultat) > 0) {
         $html_offres .= "<div class='part'>";
         $html_offres .= "<h3 class='titreOffre'>" . $row['titre'] . "</h3>";
         $html_offres .= "<div class='iconplusp'>";
-        $html_offres .= "<img src='../PROJETWEB/home/description.png' alt='' class='iconi' />";
+        $html_offres .= "<img src='home/description.png' alt='' class='iconi' />";
         $html_offres .= "<p class='desc'>" . $row['description'] . "</p>";
         $html_offres .= "</div>";
         $html_offres .= "<div class='iconplusp'>";
-        $html_offres .= "<img src='../PROJETWEB/home/localisation.png' alt='' class='iconi' />";
+        $html_offres .= "<img src='home/localisation.png' alt='' class='iconi' />";
         $html_offres .= "<p class='lieu'><strong>Lieu de l'offre:</strong> " . $row['lieu'] . "</p>";
         $html_offres .= "</div>";
         $html_offres .= "<div class='iconplusp'>";
-        $html_offres .= "<img src='../PROJETWEB/home/fixe.png' alt='' class='iconi' />";
+        $html_offres .= "<img src='home/fixe.png' alt='' class='iconi' />";
         $html_offres .= "<p class='lieu'><strong>Tel:</strong> " . $row['tel'] . "</p>";
         $html_offres .= "</div>";
         $html_offres .= "<div class='iconplusp'>";
-        $html_offres .= "<img src='../PROJETWEB/home/email.png' alt='' class='iconi' />";
+        $html_offres .= "<img src='home/email.png' alt='' class='iconi' />";
         $html_offres .= "<p class='lieu'><strong>Email:</strong> " . $row['email'] . "</p>";
         $html_offres .= "</div>";
         $html_offres .= "</div>";
         $html_offres .= "<div class='imageCat'>";
+        $html_offres .= "<img src='home/Service_de_livraison.jpg' alt='image' class='imageint' />";
         $html_offres .= "</div>";
         $html_offres .= "</div>";
     }
