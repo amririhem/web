@@ -92,17 +92,25 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
           </div>
           <div class="labelinput1">
             <label for="genre" class="genre">Genre</label>
-            <input type="text" id="genre" name="genre" value="<?php echo $utilisateur['genre']; ?>" class="inputinscrit1"  readonly >
-          </div>
+            <label for="female">Female</label>
+<input type="radio" id="female" name="genre" value="female" <?php if ($utilisateur['genre'] == "female") echo "checked"; ?>>
+
+<label for="male">Male</label>
+<input type="radio" id="male" name="genre" value="male" <?php if ($utilisateur['genre'] == "male") echo "checked"; ?> > </div>
           <div class="labelinput1">
             <label for="role" class="role">Rôle</label>
-            <input type="text" id="role"  name="role" value="<?php echo $utilisateur['role']; ?>" class="inputinscrit1" readonly  >
+            <input type="text" id="role"  name="role"  value="<?php echo $utilisateur['role']; ?>" class="inputinscrit1"  readonly   >
           </div>
     
           
           </div>
           <button type="button" class="bottom2" onclick="window.location.href='modifierProfil.php'" >Modifier</button>
           
+<<<<<<< HEAD
+          
+          <button type="button" class="bottom2" onclick="window.location.href='modifierProfil.php'" >Modifier</button>
+=======
+>>>>>>> b7c8192206d8a64bef3b72fa224e95d4712ac668
          
         </form> 
       </div>

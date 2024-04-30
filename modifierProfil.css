@@ -44,18 +44,16 @@
     margin-left: 201px;
 }
   
-  .tabcontent{
-    width: 602px;
-    height: fit-content;
-    background-color: #fcfcfc;
-    border: 2px solid black;
-    border-radius: 21px;
-    /*display: flex;
-    flex-direction: row;*/
-    box-shadow: 9px 8px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-top: 103px;
-       
-  }
+.tabcontent {
+  width: 602px;
+  height: fit-content;
+  background-color: #fcfcfc;
+  border: 2px solid black;
+  border-radius: 21px;
+  box-shadow: 9px 8px 0px 0px rgba(0, 0, 0, 0.2);
+  margin-top: -250px;
+  position: absolute;
+}
   .labelinput {
     display: flex;
     margin-bottom: 5px;
@@ -399,5 +397,42 @@
   .navitem:active {
     background-color: #e5e5e5;
   }
+  .btn2 {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 300px;
+    font-weight: bold;
+    font-size: 13px;
+    /* margin-top: 5px; */
+    background-color: #e9d6b4;
+    margin-top: 40px;
+    width: 30%;
+    min-height: 28px;
+    margin-top: -28px;
+}
+  .btn {
+   
+    cursor: pointer; /* Curseur de souris */
+     
+     
+
+border: none;
+outline: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 90px;
+    margin-left: -2px;
+    background:transparent;
+    
+    margin-top: 40px;
+    width:30%;
+   min-height: 28px;
   
-  
+
+
+   text-shadow: 2px 4px 19px #ffe5ad;
+   font-family: math;
+   color:#3d3322;
+   font-size: 13px;
+   
+  }

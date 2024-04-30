@@ -25,11 +25,12 @@
   top: 0px;
 }
 
-.mef{
+.mef {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 600px;
 }
  
 .inslogo {
