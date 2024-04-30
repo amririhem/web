@@ -104,14 +104,7 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
     
           
           </div>
-          <button type="button" class="bottom2" onclick="window.location.href='modifierProfil.php'" >Modifier</button>
-          
-<<<<<<< HEAD
-          
-          <button type="button" class="bottom2" onclick="window.location.href='modifierProfil.php'" >Modifier</button>
-=======
->>>>>>> b7c8192206d8a64bef3b72fa224e95d4712ac668
-         
+          <button type="button" class="bottom2" onclick="window.location.href='modifierProfil.php'" >Modifier</button> 
         </form> 
       </div>
     </div> 
