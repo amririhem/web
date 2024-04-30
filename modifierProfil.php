@@ -94,8 +94,11 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
           </div>
           <div class="labelinput1">
             <label for="genre" class="genre">Genre</label>
-            <input type="text" id="genre" name="genre" value="<?php echo $utilisateur['genre']; ?>" class="inputinscrit1"   >
-          </div>
+<label for="female">Female</label>
+<input type="radio" id="female" name="genre" value="female" <?php if ($utilisateur['genre'] == "female") echo "checked"; ?>>
+
+<label for="male">Male</label>
+<input type="radio" id="male" name="genre" value="male" <?php if ($utilisateur['genre'] == "male") echo "checked"; ?>>          </div>
           <div class="labelinput1">
             <label for="role" class="role">Rôle</label>
             <input type="text" id="role"  name="role" value="<?php echo $utilisateur['role']; ?>" class="inputinscrit1"   >
