@@ -35,29 +35,35 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
 <body>
   <div class="background">
     <div class="navbar"> 
-      <header class="header">
-          <img src="../PROJETWEB/img/etud.png" alt="" class="logo">
-          <ul class="navlist">
-          <li class="navitem">
-              <a href="etudiant.html" class="link">
-              <img src="../PROJETWEB/img/maison.png" alt="Acceuil" class="icon">
-              <p class="picon">Acceuil</p>
-              </a>
-          </li>
-          <li class="navitem">
-              <a href="profil.html" class="link">
-              <img src="../PROJETWEB/img/utilisateur.png" alt="Save Offres" class="icon">
-              <p class="picon">Profil</p>
-              </a>
-          </li>
-          <li class="navitem">
-              <a href="Acceuil.html" class="link">
-              <img src="../PROJETWEB/img/bloquer.png" alt="Log Out" class="icon">
-              <p class="picon">Deconnexion</p>
-              </a>
-          </li>
-          </ul>
-      </header>
+    <header class="header">
+        <img src="img/etud.png" alt="" class="logo">
+        <ul class="navlist">
+        <li class="navitem">
+            <a href="etudiant.html" class="link">
+            <img src="img/maison.png" alt="Acceuil" class="icon">
+            <p class="picon">Acceuil</p>
+            </a>
+        </li>
+        <li class="navitem">
+            <a href="Mesoffre.php" class="link">
+            <p class="picon">Mes Offres</p>
+            </a>
+        </li>
+        <li class="navitem">
+            <a href="profil.php" class="link">
+            <img src="img/utilisateur.png" alt="Save Offres" class="icon">
+            <p class="picon">Profil</p>
+            </a>
+        </li>
+       
+        <li class="navitem">
+            <a href="Acceuil.html" class="link">
+            <img src="img/bloquer.png" alt="Log Out" class="icon">
+            <p class="picon">Deconnexion</p>
+            </a>
+        </li>
+        </ul>
+    </header>
   </div>
     <div class="loginbody">
       <div class="tabcontent">
@@ -95,9 +101,8 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
     
           
           </div>
+          <button type="button" class="bottom2" onclick="window.location.href='modifierProfil.php'" >Modifier</button>
           
-          <button type="button" class="bottom1">Modifier mot de passe </button>
-          <button type="submit" onclick="window.location.href='modifierProfil.php'"  class="bottom2" >Modifier</button>
          
         </form> 
       </div>

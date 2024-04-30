@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($resultat_mot_de_passe);
         $mot_de_passe_actuel = $row["pwd"];
         if ($ancien_mot_de_passe == $mot_de_passe_actuel) {
-            $requete_mise_a_jour = "UPDATE user SET mot_de_passe = '$nouveau_mot_de_passe' WHERE id_utilisateur = $id_utilisateur";
+            $requete_mise_a_jour = "UPDATE user SET pwd = '$nouveau_mot_de_passe' WHERE id_user = $id_utilisateur";
             $resultat_mise_a_jour = mysqli_query($connexion, $requete_mise_a_jour);
             if (!$resultat_mise_a_jour) {
                 die("Erreur lors de la mise à jour du mot de passe : " . mysqli_error($connexion));
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
             }
         } else {
-            echo "<script>alert('Ancien mot de passe incorrect. Veuillez réessayer.'); window.location.href = 'modifier_mot_de_passe.php';</script>";
+            echo "<script>alert('Ancien mot de passe incorrect. Veuillez réessayer.'); window.location.href = 'modifierMotDePasse.html';</script>";
             exit();
         }
     } else {
