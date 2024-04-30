@@ -96,8 +96,8 @@ if (isset($_SESSION['id_user']) && !empty($_SESSION['id_user'])) {
           
           </div>
           
-          <button type="button" class="bottom1">Modifier mot de passe </button>
-          <button type="submit" onclick="window.location.href='modifierProfil.php'"  class="bottom2" >Modifier</button>
+          
+          <button type="button" class="bottom2" onclick="window.location.href='modifierProfil.php'" >Modifier</button>
          
         </form> 
       </div>
