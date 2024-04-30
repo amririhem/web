@@ -652,8 +652,8 @@ margin-top: 20px;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color:  #ededec;
-  height: 200px;
+  background-color: #ebe2d9;
+  height: 150px;
 }
 .contact{
   display: flex;
@@ -694,7 +694,7 @@ margin-top: 20px;
 }
 .copyright{
   width: 100%;
-  background-color: #ededec;
+  background-color: #ebe2d9;
   height: 70px;
   display: flex;
   align-items: center;

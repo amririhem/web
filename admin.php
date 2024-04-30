@@ -20,6 +20,7 @@ if (!$resultat_utilisateurs) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Utilisateurs</title>
+    <link rel="stylesheet" href="admin.css">
     <style>
         table {
             border-collapse: collapse;
@@ -39,18 +40,22 @@ if (!$resultat_utilisateurs) {
     <h2>Liste des Utilisateurs</h2>
     <table>
         <tr>
-            <th>ID Utilisateur</th>
+            <th class='id' >ID Utilisateur</th>
             <th>Nom</th>
+            <th>Prenom</th>
             <th>Email</th>
-            <th>Action</th>
+            <th>Role</th>
+            <th class='action'>Action</th>
         </tr>
         <?php
         while ($row = mysqli_fetch_assoc($resultat_utilisateurs)) {
             echo "<tr>";
             echo "<td>" . $row['id_user'] . "</td>";
             echo "<td>" . $row['nom'] . "</td>";
+            echo "<td>" . $row['prenom'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
-            echo "<td><form action='supprimeruser.php' method='post'><input type='hidden' name='id_utilisateur' value='" . $row['id_user'] . "'><input type='submit' value='Supprimer'></form></td>";
+            echo "<td>" . $row['role'] . "</td>";
+            echo "<td><form action='supprimeruser.php' class='form' method='post'><input type='hidden' name='id_utilisateur' value='" . $row['id_user'] . "'><input type='submit' value='Supprimer' class='deleteoffre'></form></td>";
             echo "</tr>";
         }
         ?>
